@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# E-Commerce Platform: Food4U
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Executive Summary
+- E-commerce platform for fresh produce
+- CRUDing on 19 RESTful routes for 4 resources
+- NoSQL based database management for user, order, order-item, and stock-keeping-unit resources
+- Front- and back-end integration of Stripe checkout
+- Custom-built middleware avoids need for front-end injection of order details
+- Session persistence managed by storing React state in session-storage and subsequent rehydration upon customer returning to client after Stripe checkout
 
-## Available Scripts
+### Technologies Used
+| Technology        | Front-End | Back-End |
+|-------------------|:---------:|:--------:|
+| Axios             |     x     |          |
+| bcrypt            |           |    x     |
+| Bootstrap         |     x     |          |
+| cors              |           |    x     |
+| Express           |           |    x     |
+| GeoIPLite         |           |    x     |
+| HTML5             |     x     |          |
+| JavaScript        |     x     |    x     |
+| Lodash            |     x     |    x     |
+| Moment            |     x     |          |
+| MongoDB           |           |    x     |
+| Mongoose          |           |    x     |
+| Node.JS           |           |    x     |
+| Passport          |           |    x     |
+| React             |     x     |          |
+| SCSS              |     x     |          |
+| Stripe            |     x     |    x     |
+| Styled-components |     x     |          |
 
-In the project directory, you can run:
+## Background
 
-### `npm start`
+The genesis of Food4U is to add local distribution channels for farmers and to offer locally farmed seasonal produce to customers.
+### Company Story
+We pride ourselves in delivering fresh produce to your home! All our products are sourced exclusively from local farmers. This has the added benefit of being environmentally friendly. Our produce is local and seasonal so please bear with us if items are currently unavailable - our farmers are working hard on the next harvest! It goes without saying that all our farmers are exclusively No-GMO and all produce is certified organic. Save time by shopping on our app and we will deliver the products right to your home. We use Stripe to process your payment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Front-End Application
+This repo is the front-end of the project. It was written using:
++ JavaScript
++ HTML
++ CSS/SCSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The frameworks and libraries used, include:
++ React
++ Bootstrap
++ Lodash
++ Moment
++ Axios
++ Styled-components
++ Stripe implementation for payments processing
 
-### `npm test`
+## Hosted Applications
+### Front-end
+The front-end app is hosted on [GitHub Pages](https://tech-it-out.github.io/Food4U-client/#/) and the repository can be found on [GitHub](https://github.com/Tech-It-Out/Food4U-client)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Back-end
+The back-end is deployed on [Heroku](https://salty-beyond-56482.herokuapp.com/) and the repository can be found on [GitHub](https://github.com/Tech-It-Out/food4u-api)
 
-### `npm run build`
+## Wireframes
+![Wireframes](admin/Wireframes.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## User Stories
++ As a registered user, I would like to sign in with email and password.
++ As an unregistered user, I would like to sign up with email and password.
++ As a signed in user, I would like to change password.
++ As a signed in user, I would like to sign out.
++ As an unregistered user, I would like to see all of the products.
++ As a signed in user, I would like to add and remove products from a shopping cart.
++ As a signed in user, I would like to purchase products in a shopping cart using Stripe with react azmenak/react-stripe-checkout
++ As a signed in user, I would like to see all my past orders.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Planning Documentation
+The development team used GitHub's project management [Kanban](https://github.com/orgs/Tech-It-Out/projects/2?add_cards_query=is%3Aopen) for macro project development and planning purpose.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For front-end specific planning issues the team used GitHub's project management [Kanban](https://github.com/Tech-It-Out/Food4U-client/projects) that sits inside the repo.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Next Development Phase
+1. Build a stock-keeping / inventory balance into the product collection such that customers can only check out items / add items to the cart that are in stock.
+1. instead of using Stripe's hosted payment page, build proprietary one that enables the customer to never leave the company website
+1. Add favourites
+1. Search for products
