@@ -53,10 +53,10 @@ The frameworks and libraries used, include:
 
 ## Hosted Applications
 ### Front-end
-The front-end app is hosted on [GitHub Pages](https://tech-it-out.github.io/Food4U-client/#/) and the repository can be found on [GitHub](https://github.com/Tech-It-Out/Food4U-client)
+The front-end app is hosted on [AWS Amplify](https://main.d1u4zd8arazu9j.amplifyapp.com) and the repository can be found on [GitHub](https://github.com/Tech-It-Out/Food4U-client)
 
 ### Back-end
-The back-end is deployed on [Heroku](https://salty-beyond-56482.herokuapp.com/) and the repository can be found on [GitHub](https://github.com/Tech-It-Out/food4u-api)
+The back-end is deployed with Serverless on [AWS Lambda](https://gskdahngmj.execute-api.us-east-1.amazonaws.com/prod) and the repository can be found on [GitHub](https://github.com/Tech-It-Out/food4u-api)
 
 ## Wireframes
 ![Wireframes](admin/Wireframes.png)
