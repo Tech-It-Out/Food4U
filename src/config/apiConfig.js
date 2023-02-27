@@ -1,6 +1,6 @@
 let apiUrl
 const apiUrls = {
-  production: 'https://salty-beyond-56482.herokuapp.com',
+  production: 'https://gskdahngmj.execute-api.us-east-1.amazonaws.com/prod',
   development: 'http://localhost:3001'
 }
 
