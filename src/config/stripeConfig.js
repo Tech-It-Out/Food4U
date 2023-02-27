@@ -1,0 +1,3 @@
+const stripePublicKey = 'pk_test_51MfukGEi45UPIo2agw4WycsYtOvSr5OYPjeVdgbk8W3Z3W15UIcwe4FkQyhajw7Ar6IcMoGgsUjFReGNJDA6exHI00jBanpETP';
+
+export default stripePublicKey;

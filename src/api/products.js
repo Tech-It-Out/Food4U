@@ -1,8 +1,8 @@
-import apiUrl from '../apiConfig'
 import axios from 'axios'
+import config from "../config";
 
 function getProductsFromApi () {
-  return axios.get(apiUrl + '/products')
+  return axios.get(config.apiUrl + '/products')
 }
 
 export {

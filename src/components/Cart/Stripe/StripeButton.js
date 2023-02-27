@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { loadStripe } from '@stripe/stripe-js'
-import apiUrl from '../../../apiConfig'
 import { Button } from '../../LandingPage/Product/Product'
 import styled from 'styled-components'
+import config from "../../../config";
 
 class StripeButton extends Component {
   constructor (props) {
@@ -28,10 +28,10 @@ class StripeButton extends Component {
   }
 
   handleClick = async () => {
-    const stripePromise = loadStripe('pk_test_51IZJoXB0yfyrGtyK2QhYGE8ewvoGXa3UAp8U5Gzd788GGT62GYHspWAYFnzYzasjCkT8KgVRPNtF1Uys6V59AEBh0015fGpJ2d')
+    const stripePromise = loadStripe(config.stripePublicKey)
     const stripe = await stripePromise
 
-    const response = await fetch(apiUrl + '/create-checkout-session', {
+    const response = await fetch(config.apiUrl + '/create-checkout-session', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.props.user.token}`

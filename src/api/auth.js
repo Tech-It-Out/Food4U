@@ -1,10 +1,10 @@
-import apiUrl from '../apiConfig'
 import axios from 'axios'
+import config from "../config";
 
 export const signUp = credentials => {
   return axios({
     method: 'POST',
-    url: apiUrl + '/sign-up',
+    url: config.apiUrl + '/sign-up',
     data: {
       credentials: {
         email: credentials.email,
@@ -17,7 +17,7 @@ export const signUp = credentials => {
 
 export const signIn = credentials => {
   return axios({
-    url: apiUrl + '/sign-in',
+    url: config.apiUrl + '/sign-in',
     method: 'POST',
     data: {
       credentials: {
@@ -30,7 +30,7 @@ export const signIn = credentials => {
 
 export const signOut = user => {
   return axios({
-    url: apiUrl + '/sign-out',
+    url: config.apiUrl + '/sign-out',
     method: 'DELETE',
     headers: {
       'Authorization': `Bearer ${user.token}`
@@ -40,7 +40,7 @@ export const signOut = user => {
 
 export const changePassword = (passwords, user) => {
   return axios({
-    url: apiUrl + '/change-password',
+    url: config.apiUrl + '/change-password',
     method: 'PATCH',
     headers: {
       'Authorization': `Bearer ${user.token}`
@@ -56,7 +56,7 @@ export const changePassword = (passwords, user) => {
 
 export const updateUser = (data, user) => {
   return axios({
-    url: apiUrl + '/update',
+    url: config.apiUrl + '/update',
     method: 'PATCH',
     headers: {
       'Authorization': `Bearer ${user.token}`
@@ -76,7 +76,7 @@ export const updateUser = (data, user) => {
 
 export const getUserDataFromAPI = token => {
   return axios({
-    url: apiUrl + '/user',
+    url: config.apiUrl + '/user',
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`

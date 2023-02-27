@@ -1,9 +1,9 @@
 import axios from 'axios'
-import apiUrl from '../apiConfig'
+import config from "../config";
 
 export const getOrderHistoryFromAPI = token => {
   return axios({
-    url: apiUrl + '/orders',
+    url: config.apiUrl + '/orders',
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`
@@ -13,7 +13,7 @@ export const getOrderHistoryFromAPI = token => {
 
 export const updateOrderItemWithQuantity = (quantity, orderId, orderItemId, token) => {
   return axios({
-    url: apiUrl + '/orders/' + orderId + '/orderItem/' + orderItemId,
+    url: config.apiUrl + '/orders/' + orderId + '/orderItem/' + orderItemId,
     method: 'PATCH',
     headers: {
       'Authorization': `Bearer ${token}`
@@ -28,7 +28,7 @@ export const updateOrderItemWithQuantity = (quantity, orderId, orderItemId, toke
 
 export const createNewOrderItemWithData = (orderId, token, product) => {
   return axios({
-    url: apiUrl + '/orders/' + orderId + '/orderItem',
+    url: config.apiUrl + '/orders/' + orderId + '/orderItem',
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${token}`
@@ -46,7 +46,7 @@ export const createNewOrderItemWithData = (orderId, token, product) => {
 
 export const createNewOrder = token => {
   return axios({
-    url: apiUrl + '/orders',
+    url: config.apiUrl + '/orders',
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${token}`
@@ -61,7 +61,7 @@ export const createNewOrder = token => {
 
 export const deleteOrderItem = (orderId, orderItemId, token) => {
   return axios({
-    url: apiUrl + '/orders/' + orderId + '/orderItem/' + orderItemId,
+    url: config.apiUrl + '/orders/' + orderId + '/orderItem/' + orderItemId,
     method: 'DELETE',
     headers: {
       'Authorization': `Bearer ${token}`
@@ -71,7 +71,7 @@ export const deleteOrderItem = (orderId, orderItemId, token) => {
 
 export const updateOrderStatus = (token, orderId, orderStatus) => {
   return axios({
-    url: apiUrl + '/orders/' + orderId,
+    url: config.apiUrl + '/orders/' + orderId,
     method: 'PATCH',
     headers: {
       'Authorization': `Bearer ${token}`

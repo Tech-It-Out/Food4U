@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
   production: 'https://salty-beyond-56482.herokuapp.com',
-  development: 'http://localhost:4741'
+  development: 'http://localhost:3001'
 }
 
 if (window.location.hostname === 'localhost') {
