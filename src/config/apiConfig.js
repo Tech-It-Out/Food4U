@@ -1,6 +1,6 @@
 let apiUrl
 const apiUrls = {
-  production: 'https://gskdahngmj.execute-api.us-east-1.amazonaws.com/prod',
+  production: 'https://food4u-api.onrender.com',
   development: 'http://localhost:3001'
 }
 
